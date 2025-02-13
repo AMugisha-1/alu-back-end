@@ -10,7 +10,7 @@ if __name__ == '__main__':
         sys.exit(1)
 
     user_id = sys.argv[1]
-    
+
     user_url = f"https://jsonplaceholder.typicode.com/users/{user_id}"
     todos_url = f"https://jsonplaceholder.typicode.com/users/{user_id}/todos"
 
@@ -31,7 +31,11 @@ if __name__ == '__main__':
     number_of_done_tasks = len(task_completed)
     total_number_of_tasks = len(todos_info)
 
-    print(f"Employee {employee_name} is done with tasks({number_of_done_tasks}/{total_number_of_tasks}):")
+    print(
+        f"Employee {employee_name} is done with tasks({number_of_done_tasks}/"
+        f"{total_number_of_tasks}):"
+    )
 
     for task in task_completed:
         print(f"\t {task['title']}")
+
